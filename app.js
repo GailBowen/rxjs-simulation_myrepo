@@ -63,8 +63,11 @@ observable
     .pipe(map(x => x * 100))
     .subscribe(observer)
 
+
+
 ///Original:
 // observable
-// .pipe(map(data => { return {...data, pipe1: true} }))
-// .pipe(map(data => { return {...data, pipe2: true} }))
+// .pipe(map(bob => { return {...bob, pipe1: { data: 'cagney', cat2: 'Lacey'}} }))
+// .pipe(map(bob => { return {...bob, data: 7} }))
+// .pipe(map(bob => { return {...bob, pipe2: 'what is for dinner tonight?'} }))
 // .subscribe(observer)
