@@ -56,7 +56,13 @@ const map = function (f) {
     }
 }
 
-//observable.subscribe(observer);
+
 observable
     .pipe(map(x => x.data * 2))
     .subscribe(observer)
+
+///Original:
+// observable
+// .pipe(map(data => { return {...data, pipe1: true} }))
+// .pipe(map(data => { return {...data, pipe2: true} }))
+// .subscribe(observer)
