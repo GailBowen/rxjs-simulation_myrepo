@@ -22,8 +22,12 @@ const observable = {
 
             data = data.toString().trim();
 
-            //convert data to a number or set it to 0
-            data = isNaN(data) ? 0 : parseInt(data);
+            //convert data to a number or error
+            if (isNaN(data)) {
+                observer.error('Not a number')
+            }
+
+            data = parseInt(data);
 
             observer.next({ data });
         })
