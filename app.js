@@ -58,7 +58,8 @@ const map = function (f) {
 
 
 observable
-    .pipe(map(x => x.data * 2))
+    .pipe(map(stuff => stuff.data * 2))
+    .pipe(map(data => data * 5 ))
     .subscribe(observer)
 
 ///Original:

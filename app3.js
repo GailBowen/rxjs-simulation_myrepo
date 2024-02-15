@@ -14,3 +14,5 @@ rl.question('Enter your question: ', (question) => {
         rl.close();
     });
 });
+
+console.log('goodbye Cagney & Lacey');
