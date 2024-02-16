@@ -7,6 +7,19 @@ var stockInfo = [
     {price: 400, symbol: "AMZN", volume: 400},
 ];
 
+// Array.prototype.filter = function(predicate){
+//    var results = [];
+
+//    this.forEach(function(item){
+//         if (predicate(item))
+//         {
+//             results.push(item);
+//         }
+//     });
+
+//     return results;
+// }
+
 function getStocksOver(stockInfo, min) {
     
     var results = [];
@@ -28,15 +41,21 @@ function getStocksOver(stockInfo, min) {
     // })
 
 
-    stockInfo.forEach(function(item){
-        if (item.price > min)
-        {
-          results.push(item.symbol);
-        }
+    // stockInfo.forEach(function(item){
+    //     if (item.price > min)
+    //     {
+    //       results.push(item.symbol);
+    //     }
         
-    })
+    // })
     
-    return results;
+    
+
+    return stockInfo
+        .filter(stock => {
+            return stock.price > min;
+        }).map(stock => {return stock.symbol});
+
 }
 
 var expensiveStocks = getStocksOver(stockInfo, 200);
