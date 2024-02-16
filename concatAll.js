@@ -20,8 +20,6 @@ var exchanges = [
 
 // });
 
-var infos = exchanges.concatAll();
-
 Array.prototype.concatAll = function() {
     var results = [];
     
@@ -34,4 +32,10 @@ Array.prototype.concatAll = function() {
     return results;
   };
   
+
+var infos = exchanges.concatAll();
+
+console.log(JSON.stringify(infos));
+
+
 
