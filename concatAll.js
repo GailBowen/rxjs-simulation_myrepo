@@ -30,5 +30,5 @@ var exchanges =
 
 // console.log(JSON.stringify(exchanges));
 
-var flattenedExchanges = exchanges.flat(2);
+var flattenedExchanges = exchanges.flat(2).filter(item => item.price > 300);
 console.log(JSON.stringify(flattenedExchanges));
