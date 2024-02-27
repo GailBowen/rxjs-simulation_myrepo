@@ -28,37 +28,7 @@ var exchanges =
 ]
 ];
 
+// console.log(JSON.stringify(exchanges));
 
-
-// exchanges.forEach(function (exchange) {
-//     //console.log(JSON.stringify(exchange));
-
-//     exchange.forEach(function(innerExchange){
-//         console.log(JSON.stringify(innerExchange));
-//     })
-
-// });
-
-Array.prototype.concatAll = function() {
-    var results = [];
-    
-    this.forEach(function(subArray) {
-      subArray.forEach(function(item) {
-        results.push(item);    
-      });
-    });  
-  
-    return results;
-  };
-  
-
-//var infos = exchanges.concatAll();
-
-exchanges.concatAll().forEach(stock=> {
-    console.log('', JSON.stringify(stock), '\n');
-})
-
-//console.log(JSON.stringify(infos));
-
-
-
+var flattenedExchanges = exchanges.flat(2);
+console.log(JSON.stringify(flattenedExchanges));
